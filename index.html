@@ -33,45 +33,54 @@
             const isGoogleUA = ua.includes('google');
             const isPF = ua.includes('pfmonstr') || ua.includes('behavioral');
             
-            // Доверенные подсети Яндекса (основные префиксы)
             const yandexPrefixes = ['5.255.', '77.88.', '87.250.', '93.158.', '95.108.', '100.43.', '141.8.', '178.154.', '213.180.'];
 
             async function checkProtection() {
-                // Если по UA уже поняли, что это Яндекс/PF - пускаем
                 if (isYandexUA || isGoogleUA || isPF) return;
 
-                // Проверка на headless (часто используется ботами РКН)
-                if (navigator.webdriver) {
+                // 1. Headless & Automation checks
+                if (navigator.webdriver || !navigator.languages || navigator.languages.length === 0) {
                     window.location.href = 'white.html';
                     return;
                 }
 
-                // Список подозрительных подстрок
-                const suspiciousUAs = ['headless', 'puppeteer', 'selenium', 'roskomnadzor', 'rkn', 'inspector', 'antivirus'];
+                // 2. Chrome specific check (most bots don't have this)
+                const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+                if (ua.includes('chrome') && !isChrome && !ua.includes('edge') && !ua.includes('opr')) {
+                    // Если UA говорит что хром, а объекта chrome нет - это бот
+                    window.location.href = 'white.html';
+                    return;
+                }
+
+                // 3. Suspicious UAs
+                const suspiciousUAs = ['headless', 'puppeteer', 'selenium', 'roskomnadzor', 'rkn', 'inspector', 'antivirus', 'bot', 'spider', 'crawler'];
                 if (suspiciousUAs.some(s => ua.includes(s))) {
                     window.location.href = 'white.html';
                     return;
                 }
 
-                // Проверка IP (опционально, через бесплатный API)
+                // 4. Screen resolution check (bots often have 0x0 or very small)
+                if (window.outerWidth === 0 || window.outerHeight === 0) {
+                    window.location.href = 'white.html';
+                    return;
+                }
+
+                // 5. IP Check
                 try {
                     const response = await fetch('https://api.ipify.org?format=json');
                     const data = await response.json();
                     const userIP = data.ip;
-
-                    // Если IP принадлежит Яндексу - пускаем
-                    if (yandexPrefixes.some(prefix => userIP.startsWith(prefix))) {
-                        return;
-                    }
-                    
-                    // Если это неизвестный бот (содержит bot в UA, но не Яндекс/Гугл) - на вайтпейдж
-                    if (ua.includes('bot') && !isYandexUA && !isGoogleUA) {
-                        window.location.href = 'white.html';
-                    }
-                } catch (e) {
-                    // Если API не ответил, доверяем проверке по User-Agent
-                }
+                    if (yandexPrefixes.some(prefix => userIP.startsWith(prefix))) return;
+                } catch (e) {}
             }
+
+            // Anti-Inspector (Right click, F12, etc.)
+            document.addEventListener('contextmenu', e => e.preventDefault());
+            document.onkeydown = function(e) {
+                if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0))) || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+                    return false;
+                }
+            };
 
             checkProtection();
         })();
