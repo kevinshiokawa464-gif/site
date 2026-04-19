@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://luckybear1.org/sitemap.xml
+
+User-agent: Yandex
+Allow: /
+Clean-param: ysclid /

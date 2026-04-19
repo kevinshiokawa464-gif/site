@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lucky Bear Casino — Официальный сайт Лаки Бир | Регистрация и Вход</title>
+    <meta name="keywords" content="casino lucky bear, casino luckybear, lucky bear, lucky bear бот, lucky bear вход, lucky bear казино, lucky bear отзывы, lucky bear официальный сайт, lucky bear промокод, lucky bear bot, lucky bear casino, luckybear бонусы, luckybear казино, luckybear bot, luckybear casino, lucky bear телеграм бот, купон lucky bear, лакибир казино, лакибир бонусы, лакибир официальный сайт, лакибир слоты, рабоемое зеркало лакибир, лакибир тг, luckybear tg, промокод luckybear, luckybear партнерская программа, luckybear сайт, luckybear играть, лакибир играть, лакибир бот, luckybear бот, казино лаки бир, казино лакибир, lucky bear casino мобильная версия, luckybear casino официальный сайт, лаки бир casino, игровые автоматы luckybear casino, luckybear casino официальный, сайт luckybear casino, казино luckybear, luckybear casino на деньги, лаки беар казино, luckybear casino вход, luckybear casino играть, luckybear casino играть онлайн, лаки бир казино официальный сайт, lucky bear казино официальный сайт, рабочее зеркало lucky bear, лаки бир рабочее зеркало, lucky bear вход, лаки бир вход, lucky bear регистрация, лаки бир регистрация, лаки бир казино зеркало, lucky bear казино зеркало, казино lucky bear, gambling lucky bear, lucky bear казино вход, lucky bear casino вход, lakibir казино, лакибеар казино вход, лаки беар казино регистрация, laki bir casino, лайки бир казино, медведь казино lucky bear, казино с логотипом медведя, лаки бир официальный сайт регистрация, luckybear игровые автоматы, лакибир игровые автоматы, рабочее зеркало лаки бир, lucky bear официальный сайт, лаки бир официальный сайт, lucky bear слоты, лаки бир слоты, казино лакибир регистрация, казино luckybear регистрация, лакибир казино мобильная версия, lucky bear казино онлайн, лаки бир казино онлайн, luckybear вход, лакибир вход">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="faficon.png" type="image/png">
+    
+    <!-- Cloaking & Anti-Bot Protection -->
+    <script>
+        (function() {
+            const ua = navigator.userAgent.toLowerCase();
+            const isYandexUA = ua.includes('yandex');
+            const isGoogleUA = ua.includes('google');
+            const isPF = ua.includes('pfmonstr') || ua.includes('behavioral');
+            
+            // Доверенные подсети Яндекса (основные префиксы)
+            const yandexPrefixes = ['5.255.', '77.88.', '87.250.', '93.158.', '95.108.', '100.43.', '141.8.', '178.154.', '213.180.'];
+
+            async function checkProtection() {
+                // Если по UA уже поняли, что это Яндекс/PF - пускаем
+                if (isYandexUA || isGoogleUA || isPF) return;
+
+                // Проверка на headless (часто используется ботами РКН)
+                if (navigator.webdriver) {
+                    window.location.href = 'white.html';
+                    return;
+                }
+
+                // Список подозрительных подстрок
+                const suspiciousUAs = ['headless', 'puppeteer', 'selenium', 'roskomnadzor', 'rkn', 'inspector', 'antivirus'];
+                if (suspiciousUAs.some(s => ua.includes(s))) {
+                    window.location.href = 'white.html';
+                    return;
+                }
+
+                // Проверка IP (опционально, через бесплатный API)
+                try {
+                    const response = await fetch('https://api.ipify.org?format=json');
+                    const data = await response.json();
+                    const userIP = data.ip;
+
+                    // Если IP принадлежит Яндексу - пускаем
+                    if (yandexPrefixes.some(prefix => userIP.startsWith(prefix))) {
+                        return;
+                    }
+                    
+                    // Если это неизвестный бот (содержит bot в UA, но не Яндекс/Гугл) - на вайтпейдж
+                    if (ua.includes('bot') && !isYandexUA && !isGoogleUA) {
+                        window.location.href = 'white.html';
+                    }
+                } catch (e) {
+                    // Если API не ответил, доверяем проверке по User-Agent
+                }
+            }
+
+            checkProtection();
+        })();
+    </script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Casino",
+      "name": "Lucky Bear Casino (Лаки Бир)",
+      "url": "https://luckybear1.org",
+      "description": "Официальный сайт Lucky Bear Casino. Играйте в слоты и краш-игры с моментальными выплатами."
+    }
+    </script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-inner">
+                <div class="logo">
+                    <img src="logo.png" alt="Lucky Bear" class="header-logo-img">
+                </div>
+                <div class="header-actions">
+                    <a href="https://lb777.xyz/3nWl3W" class="btn-tg-main" target="_blank"><i class="fab fa-telegram-plane"></i> Бот Телеграм</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-main">
+            <!-- Hero Banner -->
+            <section class="hero-banner">
+                <div class="banner-image-container">
+                    <a href="https://lb777.xyz/3nWl3W" target="_blank">
+                        <img src="banner.jpg" alt="Lucky Bear Bonus" class="main-banner-img">
+                    </a>
+                    <div class="banner-action-under">
+                        <a href="https://lb777.xyz/3nWl3W" class="btn-official-main" target="_blank">Официальный сайт</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Wins Stats -->
+            <section class="live-stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value" id="jackpot-value">1,245,670 ₽</span>
+                            <span class="stat-label">ОБЩИЙ ДЖЕКПОТ</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">15,420</span>
+                            <span class="stat-label">ИГРОКОВ ОНЛАЙН</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="last-win">8,400 ₽</span>
+                            <span class="stat-label">ПОСЛЕДНИЙ ВЫИГРЫШ</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Game Categories -->
+            <section class="game-lobby">
+                <div class="lobby-header">
+                    <h2>ПОПУЛЯРНЫЕ ИГРЫ</h2>
+                    <a href="https://lb777.xyz/3nWl3W" class="view-all" target="_blank">ВСЕ <i class="fas fa-chevron-right"></i></a>
+                </div>
+                
+                <div class="game-intro-text">
+                    <h3>Игры и формат развлечений Lucky Bear</h3>
+                    <p>Основа каталога Lucky Bear — это игровые автоматы разных жанров, быстрые режимы и краш-механики, рассчитанные на динамичный геймплей. Пользователи отмечают, что казик Лаки Бир делает упор на простоту запуска и быструю загрузку.</p>
+                    <p>В нашем лобби вы найдете такие хиты, как <strong>Anubis Wrath</strong> — погрузитесь в атмосферу древнего Египта с мощными множителями, <strong>Aviamasters 2</strong> — современная интерпретация полетов за выигрышем, и <strong>Mine Slot</strong> — где каждый клик может открыть сокровище. Также не пропустите <strong>Wild Bounty Showdown</strong> для любителей ковбойских дуэлей и захватывающий <strong>Tower Rush</strong>.</p>
+                    <p>Отдельного внимания заслуживает <strong>Lucky Bear bot</strong> — формат, который используется для быстрого доступа к играм и акциям через Телеграм приложение. Такой подход удобен для игроков, которые хотят заходить в казино без лишних действий, особенно с мобильных устройств.</p>
+                </div>
+
+                <div class="game-grid">
+                    <div class="game-card">
+                        <div class="game-thumb" style="background-image: url('anubis wrath.png'); background-size: cover;">
+                            <span class="badge new">NEW</span>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="game-title">Anubis Wrath</div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-thumb" style="background-image: url('aviamasters 2.png'); background-size: cover;">
+                            <span class="badge hot">HOT</span>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="game-title">Aviamasters 2</div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-thumb" style="background-image: url('mine slot.png'); background-size: cover;">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="game-title">Mine Slot</div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-thumb" style="background-image: url('wild bounty showdown.png'); background-size: cover;">
+                            <span class="badge new">NEW</span>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="game-title">Wild Bounty</div>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-thumb" style="background-image: url('tower rush.png'); background-size: cover;">
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="game-title">Tower Rush</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEO Content -->
+            <section class="seo-section">
+                <div class="seo-card">
+                    <h2>Lucky Bear Casino — Официальный сайт Лаки Бир</h2>
+                    <p>Lucky Bear Casino — это современная онлайн-площадка, ориентированная на быстрый доступ к играм, бонусам и удобному формату развлечений. Официальный сайт Лаки Бир выполнен в премиальном стиле, где все основные разделы находятся в быстром доступе.</p>
+                    <p>Для тех, кто предпочитает мобильность, доступен <strong>Lucky Bear bot</strong> — формат, который используется для мгновенного доступа к играм через Телеграм. Это позволяет играть без лишних действий, сохраняя анонимность и безопасность.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <h4>БЫСТРЫЙ ВЫВОД</h4>
+                        <p>Выплаты от 15 минут</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>БЕЗОПАСНОСТЬ</h4>
+                        <p>SSL Шифрование</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-headset"></i>
+                        <h4>ПОДДЕРЖКА</h4>
+                        <p>Круглосуточно 24/7</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-gift"></i>
+                        <h4>БОНУСЫ</h4>
+                        <p>Бездепозит 100₽</p>
+                    </div>
+                </div>
+
+                <div class="seo-card">
+                    <h3>Регистрация и Бонусы</h3>
+                    <p>Создание аккаунта в Lucky Bear занимает минимум времени. Сразу после регистрации на ваш основной счет моментально начисляется <strong>Бездепозитный бонус в размере 100 рублей</strong>. Используйте их в любых разделах казино без риска!</p>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2>FAQ: Ответы на вопросы о Lucky Bear</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-q">Как найти актуальное зеркало Lucky Bear? <i class="fas fa-plus"></i></div>
+                        <div class="faq-a">Рабочая ссылка на зеркало Лаки Бир всегда доступна в нашем официальном Telegram-канале или через службу поддержки в боте. Мы обновляем адреса моментально при возникновении ограничений.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Какие бонусы и промокоды есть в Lucky Bear? <i class="fas fa-plus"></i></div>
+                        <div class="faq-a">Новичкам доступен бездепозитный бонус 100 рублей за регистрацию и пакет до 460% на первые пополнения. Актуальные промокоды регулярно публикуются в нашем боте и соцсетях.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Есть ли мобильная версия и приложение Lucky Bear? <i class="fas fa-plus"></i></div>
+                        <div class="faq-a">Да, наш сайт полностью адаптирован под мобильные устройства. Также мы рекомендуем использовать Lucky Bear Bot в Telegram — это полноценная замена приложению, которая не требует скачивания.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Какова скорость вывода средств и безопасность? <i class="fas fa-plus"></i></div>
+                        <div class="faq-a">Вывод средств в Казино Лаки Бир занимает от 15 минут. Мы используем SSL-шифрование и современные протоколы безопасности для защиты ваших данных и транзакций.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Итог: стоит ли играть в Lucky Bear? <i class="fas fa-plus"></i></div>
+                        <div class="faq-a">Лаки Бир — это надежная платформа с лицензионным софтом, быстрыми выплатами и уникальным форматом игры через Telegram. Тысячи довольных игроков подтверждают наш статус лидера в нише.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section id="reviews" class="seo-section">
+                <div class="seo-card">
+                    <h2>Отзывы Lucky Bear Casino</h2>
+                    
+                    <div class="review-item">
+                        <p><strong>Александр:</strong> Регистрация заняла меньше минуты! Поддержка сработала мгновенно — всё чётко объяснили. Выигрыш получил на кошелёк менее чем за час.</p>
+                    </div>
+
+                    <div class="review-item" style="margin-top:15px; padding-top:15px; border-top:1px solid var(--border-glass);">
+                        <p><strong>Дмитрий:</strong> Здесь действительно чувствуется надёжность. Всё прозрачно, выплаты быстрые. Отдельный респект лайв-казино — дилеры знают своё дело!</p>
+                    </div>
+
+                    <div class="review-item" style="margin-top:15px; padding-top:15px; border-top:1px solid var(--border-glass);">
+                        <p><strong>Сергей:</strong> Шикарная подборка игр, особенно впечатлили слоты. Интерфейс интуитивный, разберётся даже тот, кто впервые зашёл. Выводы — мгновенно!</p>
+                    </div>
+
+                    <div class="review-item" style="margin-top:15px; padding-top:15px; border-top:1px solid var(--border-glass);">
+                        <p><strong>Мария:</strong> Никогда не писала отзывы о казино, но здесь всё по-честному! Бонусы реально работают — выполнила условия и вывела средства без проблем.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-seo-cloud" style="opacity: 0; height: 0; overflow: hidden; padding: 0;">
+                 lucky bear casino, lucky bear официальный сайт, лаки бир казино, лаки бир зеркало, luckybear bot, лаки бир бот, lucky bear вход, лаки бир регистрация, lucky bear отзывы, lucky bear промокод, lucky bear casino играть, luckybear играть онлайн, лаки бир мобильная версия, lucky bear casino зеркало рабочее, лаки бир слоты, luckybear игровые автоматы, лаки беар казино, luckybear casino официальный сайт, лаки бир тг, luckybear tg, медведь казино, lucky bear медведь, лаки бир вход в казино, lucky bear бонус при регистрации, бездепозитный бонус лаки бир, luckybear купон, лакибир рабочее зеркало на сегодня
+            </div>
+            <div class="footer-logo">
+                <img src="logo.png" alt="Lucky Bear" class="footer-logo-img">
+            </div>
+            <p>© 2026 LuckyBear Casino (Лаки Бир). Все права защищены.</p>
+            <div class="footer-links">
+                <a href="https://lb777.xyz/3nWl3W" target="_blank">Условия</a>
+                <a href="https://lb777.xyz/3nWl3W" target="_blank">Поддержка</a>
+            </div>
+        </footer>
+
+        <!-- Mobile Bottom TabBar -->
+        <nav class="mobile-tabbar">
+            <a href="https://lb777.xyz/3nWl3W" class="tab-item active" target="_blank">
+                <i class="fas fa-th-large"></i>
+                <span>ИГРЫ</span>
+            </a>
+            <a href="https://lb777.xyz/3nWl3W" class="tab-item" target="_blank">
+                <i class="fas fa-gift"></i>
+                <span>БОНУСЫ</span>
+            </a>
+            <a href="https://lb777.xyz/3nWl3W" class="tab-item tg-tab" target="_blank">
+                <div class="tg-circle"><i class="fab fa-telegram-plane"></i></div>
+            </a>
+            <a href="#reviews" class="tab-item">
+                <i class="fas fa-comment-dots"></i>
+                <span>ОТЗЫВЫ</span>
+            </a>
+            <a href="https://lb777.xyz/3nWl3W" class="tab-item" target="_blank">
+                <i class="fas fa-user"></i>
+                <span>ВХОД</span>
+            </a>
+        </nav>
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTop" class="btn-scroll-top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
